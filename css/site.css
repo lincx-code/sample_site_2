@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/* ======================================================
+RESET DEFAULT STYLES
+====================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, main, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ======================================================
+BASICS
+====================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html, body {
+    width: 100%;
+    min-width: 1024px;
+	height: 100%;
+    background: #ffffff;
+    color: #555555;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, Verdana, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    z-index: 9999;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 2rem;
+    color: #f05a23;
+    margin: 25px 0 20px 0;
+}
+h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #f05a23;
+}
+h3 {
+    font-size: 1rem;
+    margin: 15px 0;
+}
+p {
+    font-size: 90%;
+    line-height: 150%;
+    margin-bottom: 20px;
+}
+img {
+    display: block; 
+    width: 100%;
+    height: auto;
+}
+a {
+    color: #f05a23;
+    text-decoration: none;
+}
+a:hover {
+    color: #f05a23;
+}
+/* ======================================================
+CONTAINERS
+====================================================== */
+header {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    z-index: 999;
+}
+
+main {
+    padding: 35px 0 30px 0;
+    width: 100%;
+    clear: both;
+}
+.main-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+}
+footer {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    clear: both;
+}
+footer p {
+    font-size: 75%;
+    margin: 0;
+    padding: 8px;
+}
+/* ======================================================
+MENU
+====================================================== */
+.menu {
+    max-width: 1024px;
+    padding: 8px;
+    margin: 0 auto;
+}
+#menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    text-align: right;
+}
+.menu-list li {
+    display: inline;
+    padding-right: 20px;
+}
+.menu-list li a {
+    color: #555555;
+}
+.menu-list li a:hover, .menu-list li a.active {
+    color: #f05a23;
+}
+
+/* ======================================================
+PAGE
+====================================================== */
+.switch {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+    clear: both;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.switch:last-of-type {
+    border-bottom: none;
+}
+.switch .top {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+.switch .top img {
+    width: 70px;
+    height: auto;
+    float: left;
+    padding-right: 20px;
+}
+.switch .top span {
+    display: block;
+    float: left;
+    padding: 25px 0;
+}
+.switch .top i {
+    display: block;
+    float: right;
+    padding: 25px 20px 25px 20px;
+    cursor: pointer;
+}
+.switch .top i:hover {
+    color: #f05a23;
+}
+.switch .more {
+    padding: 15px 0;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    display: none;
+}
+/* ======================================================
+MOBILE
+====================================================== */
+
+/* FOR ALL SMALLER THAN 1024PX ************************/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    html, body {
+        min-width: 320px; /*actural size*/
+        max-width: 1024px;
+    }
+    .main-container {
+        width: 95%;
+    }
+    .description {
+        line-height: 140%;
+    }
+}
+    
+/* FOR SMALLER THAN 1024PX BUT LARGER THAN 768PX *******************/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+    
+/* FOR SMALLER THAN 767PX BUT LARGER THAN 480PX ***/
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    #menu-btn {
+        display: block;
+    }
+    .menu-list {
+        display: none;
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        border-left: 1px solid #ddd;
+    }
+    .menu-list li {
+        padding: 15px;
+        display: block;
+    }
+    .menu-list.active {
+        display: block;
+    }
+    body.active, header.active, main.active, .main-container.active, footer.active {
+        left: -200px;
+    }
+}
+    
+/* FOR SMALLER THAN 480PX ************************/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
